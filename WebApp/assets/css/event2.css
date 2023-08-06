@@ -1,0 +1,219 @@
+
+
+/* 데스크탑 우선 개발 */
+/* 1800px */
+a {
+	text-decoration: none;
+	color: black;
+}
+
+li {
+	list-style: none;
+	padding: 5px;
+	margin-top: 20px;
+}
+
+* {
+	margin: 0 auto;
+	padding: 0;
+}
+
+#wrap {
+	position: fixed;
+	left: 0;
+	right: 0;
+}
+
+.main {
+	overflow-y: auto;
+}
+
+.event_container {
+	width: 100%;
+}
+
+.form_header {
+	width: 100%;
+	padding: 20px;
+	box-sizing: border-box;
+	border-bottom: 1px solid #ccc;
+}
+
+.form_title {
+	margin-left: 5%;
+	font-weight: bold;
+	font-size: 20px;
+}
+
+a.save {
+	padding: 5px;
+	float: right;
+	background-color: #fff;
+	border: 1px solid #ccc;
+	cursor: pointer;
+}
+
+.form_content {
+	box-sizing: border-box;
+	width: 100%;
+	margin-right: 0;
+	padding: 30px;
+}
+
+/* label 스타일 조정 */
+.upload_detail {
+    padding-top: 30px;
+    background-color: #eee;
+    border-radius: 20px;
+    height: 140px;
+}
+
+.detail_upload {
+	cursor: pointer;
+	display: flex;
+	width: 40%;
+	justify-content: center;
+	padding: 10px;
+	border: 1px solid #ccc;
+	background-color: #fff;
+}
+
+.fileInput {
+	width: 100%;
+	margin-top: 30px;
+	text-align: center;
+}
+
+#chooseFile {
+    display: none;
+}
+
+div.sale_duration {
+	display: inline-block;
+}
+
+.subtxt {
+	font-size: 12px;
+	color: #aaa;
+	font-weight: bold;
+}
+
+ul#tag-list li.tag-item {
+  display: inline-block;
+  margin: 0 5px;
+  font-size: 14px;
+  padding: 4px 8px;
+  background-color: #ccc;
+  color: #000;
+  letter-spacing: -.5px;
+}
+
+.tag-item:hover {
+  background-color: #262626;
+  color: #fff;
+}
+
+.del-btn {
+  font-size: 12px;
+  font-weight: bold;
+  cursor: pointer;
+  margin-left: 8px;
+}
+
+.upload_overview span {
+}
+
+.boxing {
+	padding: 20px;
+	border: 1px solid #ccc;
+	border-radius: 20px;
+}
+
+.space {
+	margin-bottom: 30px;
+	padding-bottom: 30px;
+	border-bottom: 1px solid #ccc; 
+}
+
+
+
+
+
+/* 태블릿에 최적화된 예외 CSS 코드*/
+@media ( max-width : 1024px) {
+
+}
+
+
+
+/* 데스크탑에 최적화된 CSS 코드 */
+@media ( max-width : 768px) {
+	/* 모바일에 최적화된 예외 CSS 코드*/
+	
+}
+
+
+
+
+/* The switch - the box around the slider */
+.switch {
+  position: relative;
+  display: inline-block;
+  width: 60px;
+  height: 34px;
+}
+
+/* Hide default HTML checkbox */
+.switch input {
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+/* The slider */
+.slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #ccc;
+  -webkit-transition: .4s;
+  transition: .4s;
+}
+
+.slider:before {
+  position: absolute;
+  content: "";
+  height: 26px;
+  width: 26px;
+  left: 4px;
+  bottom: 4px;
+  background-color: white;
+  -webkit-transition: .4s;
+  transition: .4s;
+}
+
+input:checked + .slider {
+  background-color: #2196F3;
+}
+
+input:focus + .slider {
+  box-shadow: 0 0 1px #2196F3;
+}
+
+input:checked + .slider:before {
+  -webkit-transform: translateX(26px);
+  -ms-transform: translateX(26px);
+  transform: translateX(26px);
+}
+
+/* Rounded sliders */
+.slider.round {
+  border-radius: 34px;
+}
+
+.slider.round:before {
+  border-radius: 50%;
+}

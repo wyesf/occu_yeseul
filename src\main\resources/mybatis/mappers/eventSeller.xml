@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="eventSeller">
+	
+	<!-- 쿼리문 작성 -->
+	<!-- mapper 안에 쿼리문을 작성해서 namespace의 그걸 DB와 연결시켜서 적용하겠다 -->
+
+	<!-- 폼 데이터 저장 -->
+	<!-- <insert id="insertForm" parameterType="String">
+	<insert id="insertForm" parameterType="String" resultType="String">
+		<![CDATA[
+			insert into test
+			values
+			(?, "test")
+		]]>
+	</insert> -->
+ 	<insert id="insertForm" parameterType="com.occu.vo.EventVo">
+		<![CDATA[
+			INSERT INTO saleform 
+			VALUES (
+			    SEQ_SALEFORM.nextval,
+			    #{formPath},
+			    #{formName},
+			    #{formGName},
+			    #{formGPrice},
+			    #{formQnt},
+			    #{formLmtb, jdbcType=CHAR},
+			    #{formLmtc},
+			    #{formStockOpen, jdbcType=CHAR}
+			)
+		]]>
+	</insert>
+
+
+	<select id="selectForm" parameterType="String" resultType="com.occu.vo.EventVo">
+		<![CDATA[
+			SELECT formNo
+			FROM saleform
+			WHERE formName = #{formName}
+		]]>
+	</select>
+
+	<select id="selectFormInfo" parameterType="String" resultType="com.occu.vo.EventVo">
+		<![CDATA[
+			SELECT *
+			FROM saleform
+			WHERE formNo = #{formNo}
+		]]>
+	</select>
+	
+	
+
+</mapper>

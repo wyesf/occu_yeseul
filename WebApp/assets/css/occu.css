@@ -1,0 +1,118 @@
+/* 데스크탑 우선 개발 */
+/* 1800px */
+a {
+	text-decoration: none;
+	color: black;
+}
+
+li {
+	list-style: none;
+	padding: 5px;
+	margin-top: 20px;
+}
+
+* {
+	margin: 0 auto;
+	padding: 0;
+}
+
+.container {
+	width: 75%;
+	margin-right: 0;
+	/* border: 1px solid #ccc; */
+}
+
+header {
+	width : 30%;
+}
+
+.main_nav img {
+	width: 50px;
+	height: 50px;
+}
+
+.main_nav span {
+	margin-left: 10px;
+}
+
+div#wrap {
+	display: flex;
+	align-items: flex-start;
+	width: 90%;	
+	height: 100%;
+}
+
+div.main {
+	border-left: 1px solid #ccc;
+	border-right: 1px solid #ccc;
+	width: 780px;
+	height: 100%;
+	margin: 0;
+}
+
+div.side_right {
+	border: 1px solid #ccc;
+	width: 400px;
+	margin-left: 0;
+	height: 300px;
+}
+
+.home, .search, .dm, .event, .profile, .setting {
+	display: flex;
+	flex-direction: row;
+	width: 100px;
+	align-items: center;
+	margin: 0;
+}
+
+div.logo {
+	margin-top: 30px;	
+	margin-block : 55px;
+}
+
+
+
+/* 태블릿에 최적화된 예외 CSS 코드*/
+@media ( max-width : 1024px) {
+	.container {
+		width: 20vw;
+		border: 1px solid #ccc;
+	}
+	.main_nav {
+		margin-left: 5vw;
+		width: 300px;
+	}
+	.main_nav img {
+		width: 40px;
+		height: 40px;
+	}
+	.main_nav span {
+		display: none;
+		line-height: 40px;
+		margin-left: 10px;
+	}
+}
+
+
+
+/* 데스크탑에 최적화된 CSS 코드 */
+@media ( max-width : 768px) {
+	/* 모바일에 최적화된 예외 CSS 코드*/
+	.container {
+		width: 20vw;
+		border: 1px solid #ccc;
+	}
+	.main_nav {
+		margin-left: 1vw;
+		width: 300px;
+	}
+	.main_nav img {
+		width: 40px;
+		height: 40px;
+	}
+	.main_nav span {
+		display: none;
+		line-height: 40px;
+		margin-left: 10px;
+	}
+}

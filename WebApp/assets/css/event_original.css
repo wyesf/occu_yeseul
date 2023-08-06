@@ -1,0 +1,593 @@
+
+
+/* 데스크탑 우선 개발 */
+/* 1800px */
+a {
+	text-decoration: none;
+	color: black;
+}
+
+li {
+	list-style: none;
+	padding: 5px;
+	margin-top: 20px;
+}
+
+* {
+	margin: 0 auto;
+	padding: 0;
+}
+
+#wrap {
+	position: fixed;
+	left: 0;
+	right: 0;
+}
+
+.main {
+	overflow-y: auto;
+}
+
+.event_container {
+	width: 100%;
+}
+
+.form_content .text {
+	flex-direction: row;
+	flex-wrap: nowrap;
+	align-items: center;
+	font-family: Pretendard;
+	/* font-size: 16px; */
+	/* font-weight: bold; */
+	font-stretch: normal;
+	font-style: normal;
+	line-height: normal;
+	letter-spacing: normal;
+	text-align: left;
+	color: #242424;
+}
+
+.form_header {
+	width: 100%;
+	padding: 20px;
+	box-sizing: border-box;
+	border-bottom: 1px solid #ccc;
+}
+
+.form_title {
+	margin-left: 5%;
+	font-weight: bold;
+	font-size: 20px;
+}
+
+a.save {
+	padding: 5px;
+	float: right;
+	background-color: #fff;
+	border: 1px solid #ccc;
+	cursor: pointer;
+}
+
+.form_content {
+	box-sizing: border-box;
+	width: 100%;
+	margin-right: 0;
+	padding: 30px;
+}
+
+/* label 스타일 조정 */
+.upload_detail {
+    padding: 30px 0;
+    background-color: #eee;
+    border-radius: 20px;
+	margin-bottom: 30px;
+}
+
+.detail_upload {
+	cursor: pointer;
+	display: flex;
+	width: 250px;
+	justify-content: center;
+	padding: 10px;
+	border: 1px solid #ccc;
+	background-color: #fff;
+}
+
+.fileInput {
+	width: 100%;
+	margin-top: 30px;
+	text-align: center;
+}
+
+#chooseFile {
+    display: none;
+}
+
+div.sale_duration {
+}
+
+.flex_row {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    align-items: center;
+    width: 100%;
+}
+
+.subtxt {
+	font-size: 12px;
+	color: #aaa;
+	font-weight: bold;
+}
+
+ul#tag-list {
+	margin-top: 10px;
+	margin-bottom: 0;
+}
+
+ul#tag-list li.tag-item {
+  display: inline-block;
+  margin: 0 5px;
+  font-size: 14px;
+  padding: 4px 8px;
+  background-color: #ccc;
+  color: #000;
+  letter-spacing: -.5px;
+}
+
+.tag-item:hover {
+  background-color: #262626;
+  color: #fff;
+}
+
+.del-btn {
+  font-size: 12px;
+  font-weight: bold;
+  cursor: pointer;
+  margin-left: 8px;
+}
+
+.upload_overview span {
+}
+
+.form_input {
+    width: 100%;
+    font-weight: bold;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: normal;
+    letter-spacing: normal;
+    text-align: left;
+    color: #242424;
+    padding: 15px;
+    margin-top: 7px;
+    border-radius: 10px;
+    border: solid 1px rgba(36, 36, 36, 0.2);
+}
+
+.boxing {
+	padding: 20px;
+	border: 1px solid #ccc;
+	border-radius: 20px;
+}
+
+.space {
+	margin-bottom: 30px;
+	padding-bottom: 30px;
+	border-bottom: 1px solid #ccc; 
+}
+
+
+
+
+/* upload_question */
+.upload_question {
+	width: 100%;
+	background-color: #fff;
+	margin-bottom: 30px;
+	flex-direction: column;
+}
+
+.form_content .title {
+	display: flex;
+	font-weight: bold;
+	flex-direction: row;
+	flex-wrap: nowrap;
+	align-items: center;
+	justify-content: space-between;
+	position: relative;
+}
+
+.upload_question .title .ttl_text .question_icon {
+	width: 18px;
+	height: 18px;
+	margin-right: 6px;
+}
+.form_content .ttl_text,
+.form_content .check {
+	margin: 0;
+}
+
+.form_content label[for='questionOpen'],
+.form_content label[for='transferOpen'],
+.form_content label[for='limitAgeOpen'],
+.form_content label[for='secretFormOpen'] {
+	display: inline-block;
+	position: relative;
+	width: 43px;
+	height: 26.5px;
+	border-radius: 17px;
+	background-color: #fff;
+	border: solid 1px rgba(36, 36, 36, 0.2);
+	transition-duration: 0.2s;
+	top: 0;
+	right: 0;
+	cursor: pointer;
+}
+
+.form_content label[for='questionOpen'] span,
+.form_content label[for='transferOpen'] span,
+.form_content label[for='limitAgeOpen'] span,
+.form_content label[for='secretFormOpen'] span {
+	position: absolute;
+	left: 1px;
+	top: 1px;
+	/* z-index: 1; */
+	width: 23.2px;
+	height: 23.2px;
+	flex-grow: 0;
+	border-radius: 50%;
+	box-shadow: 0 3px 1px 0 rgba(0, 0, 0, 0.1), 0 1px 1px 0 rgba(0, 0, 0, 0.16),
+		0 3px 8px 0 rgba(0, 0, 0, 0.15);
+	border: solid 0.5px rgba(0, 0, 0, 0.04);
+	background-color: #fff;
+	transition-duration: 0.2s;
+	cursor: pointer;
+}
+
+.form_content .con {
+}
+
+.form_content .con .questionCheck {
+	display: flex;
+	flex-direction: row;
+	flex-wrap: nowrap;
+	align-items: center;
+	margin-bottom: 8px;
+}
+
+.upload_question .con .questionCheck input {
+	width: 18px;
+	height: 18px;
+	margin-right: 5px;
+	border: solid 0.9px rgba(36, 36, 36, 0.2);
+	appearance: none;
+	cursor: pointer;
+	border-radius: 5px;
+}
+
+.upload_question .con .questionCheck input:checked {
+	background-image: url(https://d2i2w6ttft7yxi.cloudfront.net/site_img/formMaker/checkbox_icon.webp);
+	background-repeat: no-repeat;
+	background-size: 100%;
+	border: none;
+	background-color: #242424;
+	border-radius: 5px;
+}
+
+.upload_question .con .questionCheck label {
+	font-family: Pretendard;
+	font-size: 13px;
+	font-weight: normal;
+	font-stretch: normal;
+	font-style: normal;
+	line-height: normal;
+	letter-spacing: normal;
+	text-align: left;
+	color: #242424;
+	cursor: pointer;
+}
+
+.upload_question .con .questionList {
+	display: flex;
+	flex-direction: column;
+	margin: 8px 0;
+}
+
+.upload_question .con .questionList li {
+	display: flex;
+	flex-direction: row;
+	flex-wrap: nowrap;
+	align-items: center;
+	justify-content: space-between;
+	width: 100%;
+	height: fit-content;
+	padding: 6px 8px;
+	border-radius: 10px;
+	background-color: #f6f6f6;
+	margin-top: 10px;
+	display: flex;
+	flex-wrap: nowrap;
+}
+
+.upload_question .con .questionList li:first-child {
+	margin-top: 8px;
+}
+
+.upload_question .con .questionList li:last-child {
+	margin-bottom: 8px;
+}
+
+.upload_question .con .questionList li div {
+	font-family: Pretendard;
+	font-size: 15px;
+	font-weight: 500;
+	font-stretch: normal;
+	font-style: normal;
+	line-height: normal;
+	letter-spacing: normal;
+	text-align: left;
+	color: #242424;
+	word-break: break-all;
+	display: flex;
+	flex-wrap: nowrap;
+}
+
+.upload_question .con .questionList li div span {
+	font-family: Pretendard;
+	font-size: 18px;
+	font-weight: bold;
+	font-stretch: normal;
+	font-style: normal;
+	line-height: normal;
+	letter-spacing: normal;
+	text-align: left;
+	color: #fabe2c;
+	margin-right: 6px;
+}
+
+.upload_question .con .questionList li .delete_icon {
+	width: 20px;
+	height: 20px;
+	cursor: pointer;
+}
+
+.upload_question .con .add_con {
+	display: flex;
+	flex-direction: column;
+	align-items: flex-end;
+	margin-top: 8px;
+}
+
+.upload_question .con .add_con input {
+	width: 100%;
+	height: 50px;
+	flex-grow: 0;
+	padding: 16px 12px 16px 14px;
+	border-radius: 10px;
+	border: solid 1px rgba(36, 36, 36, 0.2);
+	background-color: #fff;
+	font-family: Pretendard;
+	font-size: 15px;
+	font-weight: 500;
+	font-stretch: normal;
+	font-style: normal;
+	line-height: normal;
+	letter-spacing: normal;
+	text-align: left;
+	color: #242424;
+	margin-bottom: 16px;
+}
+
+.upload_question .con .add_con input::placeholder {
+	font-family: Pretendard;
+	font-size: 15px;
+	font-weight: 500;
+	font-stretch: normal;
+	font-style: normal;
+	line-height: normal;
+	letter-spacing: normal;
+	text-align: left;
+	color: rgba(36, 36, 36, 0.2);
+}
+
+.upload_question .con .add_con button {
+	width: 121px;
+	height: 40px;
+	border-radius: 10px;
+	border: solid 1px #000;
+	background-color: #fff;
+	font-family: Pretendard;
+	font-size: 15px;
+	font-weight: bold;
+	font-stretch: normal;
+	font-style: normal;
+	line-height: normal;
+	letter-spacing: normal;
+	text-align: left;
+	color: #242424;
+	display: flex;
+	flex-direction: row;
+	flex-wrap: nowrap;
+	align-items: center;
+	justify-content: center;
+}
+
+.upload_question .con .add_con button img {
+	width: 16px;
+	height: 16px;
+	margin-right: 8px;
+}
+
+.display-none {
+	display: none !important;
+}
+
+input[class='onoff']:checked + label {
+	background-color: #ff5075;
+	border: none;
+}
+input[class='onoff']:checked + label span {
+	transform: translateX(18px) translateY(1px);
+}
+
+
+.upload_letter .con li.file div input {
+    display: none;
+}
+.upload_letter .con li.file {
+    padding: 11px 14px 10px 13px;
+    border-radius: 10px;
+    border: solid 1px rgba(36, 36, 36, 0.2);
+    background-color: #fff;
+    margin-bottom: 10px;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    align-items: center;
+    justify-content: space-between;
+    height: 52px;
+}
+.upload_letter .con li.file .thanksLetterTitle {
+    font-family: Pretendard;
+    font-size: 15px;
+    font-weight: 500;
+    color: rgba(36, 36, 36, 0.2);
+}
+
+
+
+
+.upload_comply .modalSellerAgree {
+}
+
+.upload_comply .modalSellerAgree .modal_title .close_icon {
+	width: 24px;
+	height: 24px;
+	top: 0px;
+	right: 0px;
+	left: unset;
+}
+
+.promise {
+	width: 191px;
+	height: 33px;
+}
+
+.upload_comply .modalSellerAgree .modal_title {
+	border: 0;
+	font-family: Pretendard;
+	font-size: 20px;
+	font-weight: bold;
+	font-stretch: normal;
+	font-style: normal;
+	line-height: normal;
+	letter-spacing: normal;
+	text-align: left;
+	color: #1b1b1b;
+	padding: 0px;
+	margin-bottom: 20px;
+}
+
+.upload_comply .modalSellerAgree ul li span {
+	float: left;
+	width: 24px;
+	height: 24px;
+	border-radius: 50%;
+	background-color: #ececec;
+	font-family: Pretendard;
+	font-size: 14px;
+	font-weight: 800;
+	line-height: 24px;
+	letter-spacing: normal;
+	text-align: center;
+	color: #000;
+	display: inline-block;
+}
+
+.upload_comply .modalSellerAgree ul {
+	background-color: unset;
+	margin-bottom: 30px;
+	padding: 0;
+}
+
+.upload_comply .modalSellerAgree ul li {
+	margin-bottom: 6px;
+}
+
+.upload_comply .modalSellerAgree ul li div {
+	display: inline-block;
+	margin-left: 4px;
+	float: left;
+	width: calc(100% - 30px);
+}
+
+.upload_comply .modalSellerAgree .con_box {
+	width: 100%;
+	display: inline-block;
+	height: 74px;
+	padding: 15px 20px;
+	border-radius: 10px;
+	background-color: #f4f5f5;
+	font-family: Pretendard;
+	font-size: 16px;
+	font-weight: normal;
+	line-height: 1.35;
+	letter-spacing: -0.16px;
+	text-align: center;
+	color: #1b1b1b;
+}
+
+.upload_comply .modalSellerAgree .btn_div {
+	width: 100%;
+	text-align: center;
+}
+
+.upload_comply .modalSellerAgree btn {
+	width: 230px;
+	height: 47px;
+	border-radius: 8px;
+	padding: 14px 40px;
+	margin-top: 20px;
+	font-family: Pretendard;
+	font-size: 16px;
+	font-weight: bold;
+	text-align: center;
+	background-color: ff6160;
+}
+
+
+
+
+
+.upload_button .con .save {
+	border: 0 none;
+	cursor: pointer;
+    width: 100%;
+    padding: 16px;
+    border-radius: 10px;
+    background-color: #ff6160;
+    color: #fff;
+    text-align: center;
+}
+
+
+
+
+
+
+
+
+
+/* 태블릿에 최적화된 예외 CSS 코드*/
+@media ( max-width : 1024px) {
+
+}
+
+
+
+/* 데스크탑에 최적화된 CSS 코드 */
+@media ( max-width : 768px) {
+	/* 모바일에 최적화된 예외 CSS 코드*/
+	
+}
